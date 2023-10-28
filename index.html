@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background-color: rgb(251, 13, 13);
+        }
+        p{
+            color: white;
+            font:bold 50px  tahoma;
+            text-align: center;
+           
+        }
+        p.pad{
+            margin-top: 200px;
+        }
+        h1{
+            color: white;
+            font: bold 25px  tahoma;
+            text-align: center;
+        }
+    </style>
+   
+</head>
+<body>
+    <p class="pad"></p>
+    <h1></h1>
+    <p class="ataturk"></p>
+
+
+ 
+    <script>
+        var metin1="YAŞASIN CUMHURİYET"
+        var metin2="1923-∞"
+        var metin3="MUSTAFA KEMAL ATATÜRK'ÜN KURDUĞU CUMHURİYET 100 YAŞINDA"
+        const charArray1 = metin1.split('')
+        const charArray2 = metin2.split('')
+        const charArray3 = metin3.split('')
+        const p = document.querySelector("p")
+        const h1 = document.querySelector("h1")
+        const p2 = document.querySelector("p.ataturk")
+        var i=0,j=0,k=0
+        harfEkle=()=>{
+            if(i<charArray1.length){
+                p.textContent+=charArray1[i]
+                i++
+            }
+        }
+
+        harfEkle2=()=>{
+            if(j<charArray2.length){
+                h1.textContent+=charArray2[j]
+                j++
+            }
+        }
+
+        harfEkle3=()=>{
+            if(k<charArray3.length){
+                p2.textContent+=charArray3[k]
+                k++
+            }
+        }
+
+        setInterval(harfEkle3,100)
+        setInterval(harfEkle2,100)
+        
+        setInterval(harfEkle,100)
+
+    </script>
+</body>
+</html>
